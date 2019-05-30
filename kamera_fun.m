@@ -5,7 +5,7 @@ preview(vid)
 
 a = zeros(size(data, 1), size(data, 2));
 just_red = cat(3, red, a, a);%wyzerowanie sk³adowych g i b
-imtool(just_red);            %zrzut ekranu w barwach czerwonych
+%imtool(just_red);            %zrzut ekranu w barwach czerwonych
 
 hsv = rgb2hsv(just_red);     %konwersja rgb na palete hsv
 v = hsv(:, :, 3);            %szukamy najasniejszej barwy 
