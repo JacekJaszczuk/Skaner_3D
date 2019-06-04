@@ -1,5 +1,6 @@
-function odleglosc = kamera_fun( vid )
+function odleglosc = kamera_fun( vid, numer_pliku, katalog)
 data = getsnapshot(vid);
+save(sprintf('%s/dane%d.mat', katalog, numer_pliku), 'data');
 red = data(:, :, 1);
 preview(vid)
 
