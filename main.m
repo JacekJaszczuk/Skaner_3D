@@ -12,6 +12,6 @@ for i = 1:360
 end
 
 % Dokonaj analizy:
-[x,y,z] = analiza(katalog);
+[x,y,z] = analiza2(katalog);
 [xx,yy,zz] = filtr(x,y,z,12,44);
 rysuj(xx,zz,yy);
