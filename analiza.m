@@ -1,4 +1,4 @@
-function odleglosci = analiza(katalog)
+function [wsp_x, wsp_y, wsp_z] = analiza(katalog)
 % Stałe środowiska pomiarowego:
 d = 13.5;                 % Odległość kamery od lasera (cm).
 a = 7.5;                  % Wielkość podstawy trojkata; szerokość ramki obrazu (cm).
@@ -42,7 +42,4 @@ wsp_z = [];
 for i = 1:360
   wsp_z = [wsp_z 1:48];
 end
-
-% Rysuj obiekt:
-plot3(wsp_x, wsp_y, wsp_z);
 end
