@@ -2,7 +2,7 @@ vid = kamera_init(); % Inicjalizacja kamery.
 s = motor_init();    % Inicjalizacja silnika.
 
 numer_pliku = 1;         % Początkowy numer pliku.
-katalog = 'Kaczka_foto'; % Do jakiego katalogu zapisywać pomiar.
+katalog = 'bransoletka_foto';   % Do jakiego katalogu zapisywać pomiar.
 
 % Zbierz dane:
 for i = 1:360
@@ -12,6 +12,5 @@ for i = 1:360
 end
 
 % Dokonaj analizy:
-[x,y,z] = analiza2(katalog);
-[xx,yy,zz] = filtr(x,y,z,12,44);
-rysuj(xx,zz,yy);
+[x,y,z] = analiza(katalog);
+rysuj(x,z,y);

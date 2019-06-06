@@ -20,7 +20,7 @@ for i = 1:360
   for j = 1:48
     buf = data([(j-1)*10+1:j*10],:);             % Wytnij tylko interesujące nas próbki.
     max_red = max(max(buf));                     % Szukaj wartości maksymalnej.
-    [_, c] = find(buf == max_red);               % Znajdź wszystkie punkty z maksymalną wartością.
+    [r, c] = find(buf == max_red);               % Znajdź wszystkie punkty z maksymalną wartością.
     x = median(c);                               % Wybierz punkt środkowy.
     r = d/(tand(laserkat)+(x-320)/f);            % Wyznaczamy odległość od soczewki kamery.
     odleglosc = r-z;                             % Wyznaczamy odległość od środka podstawy.
@@ -42,4 +42,5 @@ wsp_z = [];
 for i = 1:360
   wsp_z = [wsp_z 1:48];
 end
+wsp_z = wsp_z*(-1);
 end
