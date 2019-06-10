@@ -13,4 +13,5 @@ end
 
 % Dokonaj analizy:
 [x,y,z] = analiza(katalog);
-rysuj(x,z,y);
+[xx,yy,zz] = filtr(x,y,z,-40, -12);
+rysuj(xx,zz,yy);
